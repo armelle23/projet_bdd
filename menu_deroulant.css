@@ -3,6 +3,7 @@ label
 {
 	font-size: 40px;
 	font-weight: bold;
+	
 }
 
 #menu ul {
@@ -66,8 +67,3 @@ button
 	
 }
 
-body {
-color:black;
-background-color:white;
-background-image:url(auto1.jpg);
-}

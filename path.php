@@ -1,3 +1,20 @@
+
+
+<?php
+
+            try
+{
+  
+  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,63 +28,37 @@
     <link href="bibou.css" rel="stylesheet">
     <link href="login.css" rel="stylesheet">
        <link href="path.css" rel="stylesheet">
+        <link href="team.css" rel="stylesheet">
  
 
 
 </head>
 <body>
-
+<form method="post" action="BDD_project.php">
 <div id="container">
 
-    <div id="login">
-
-        <div class="content">
-            <form method="post" action="index.html">
-
-
-                <div class="form">
-                    <label for="username">Ville de départ : Paris</label>
+            <div id="login">
+                
+                    <strong>Ville de depart </strong> <?php echo $_POST['vdepart'];  ?> 
                     
+            </div>
+                <div class="content">   
                 </div>
-
-                <div class="form">
-                    <label for="password">Ville d'arrivée : Lyon</label>
-                   
-                </div>
-
-             </div>
-
-
-    </div>
-
+            </div>
     <div id="container">
+            <div id="login">
+ 
+               <strong>Ville d'arrivée</strong> <?php echo $_POST['varrivee'];  ?>
 
-    <div id="login">
-
-        <div class="content">
-            
-                <div class="form">
-                    <label for="username">Trajet</label>
-                    
+     </div>
+                <div class="content">   
                 </div>
-
-               
-
-            
-        </div>
+            </div>
         
 
-    </div>
+     <button type="submit" <a >Valider </a> </button>
 
 
-
-
-        
-
-      <button type="submit" <a href="accueil.html">Modifier </a> </button>
-
-
-    
 
 
    
