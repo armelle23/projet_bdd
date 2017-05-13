@@ -9,8 +9,6 @@
     <link href="assets/lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="menu_deroulant.css" rel="stylesheet">
     <link href="bibou.css" rel="stylesheet">
- 
-
 
 </head>
 <body>
@@ -56,11 +54,6 @@
   <form method="post" action="path.php">
       <button type="submit" <a href="path.php">Valider </a> </button>
       </form>
-
-
-    
-
-
    
 </body>
 </html>
