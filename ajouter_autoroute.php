@@ -3,15 +3,15 @@
     <title>Ajouter Ville</title>
   </head>
 <body>
-<form name="insertion" action="ajouter_post.php" method="POST">
+<form name="insertion" action="ajouter_postA.php" method="POST">
   <table border="0" align="center" cellspacing="2" cellpadding="2">
     <tr align="center">
-      <td>Ville</td>
-      <td><input type="text" name="NomV"></td>
+      <td>CodeA</td>
+      <td><input type="text" name="CodeA"></td>
     </tr>
     <tr align="center">
-      <td>CodeP</td>
-      <td><input type="text" name="CodeP"></td>
+      <td>KmT</td>
+      <td><input type="text" name="KmT"></td>
     </tr>
     
  

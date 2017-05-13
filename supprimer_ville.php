@@ -18,20 +18,17 @@ catch(Exception $e)
 <html>
     <head>
       <meta charset="utf-8">
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
       <title>Test2</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+     
      <link href="bibou.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-      <script src="js/jquery-min.js"></script>
-      <script src="js/bootstrap.min.js "></script>
+     
     
     </head>
  
 <body>
 
-   <form method="get" action="supprimer_post.php">
+   <form method="get" action="supprimer_postV.php">
 
    <div id ="con">
         
