@@ -6,15 +6,15 @@
  
  
   $CodT  = $_POST["CodT"] ;
-  $CodA= $_POST["CodA"] ;
-  $DuKm= $_POST["Dukm"] ;
-  $AuKm= $_POST["Aukm"] ;
+  $CodeA= $_POST["CodeA"] ;
+  $DuKm= $_POST["DuKm"] ;
+  $AuKm= $_POST["AuKm"] ;
 
   
   
  
-  $sql = "INSERT  INTO troncon (CodT, CodA, DuKm , AuKm)
-            VALUES ( '$CodT', '$CodA', '$DuKm' , '$Aukm') " ;
+  $sql = "INSERT  INTO troncon (CodT, CodeA, DuKm , AuKm )
+            VALUES ( '$CodT', '$CodA', '$DuKm' , '$Aukm', '$CodA') " ;
  
 
   $requete = mysql_query($sql, $cnx) or die( mysql_error() ) ;

@@ -55,10 +55,10 @@ catch(Exception $e)
 
        
      <button type="submit" <a >Supprimer </a> </button>
+     <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
 
       </form>
 
  
     </body>
     </html>        
-  

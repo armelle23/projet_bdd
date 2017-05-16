@@ -26,8 +26,10 @@
  
     <tr align="center">
       <td colspan="2"><input type="submit" value="Ajouter"></td>
+
     </tr>
   </table>
 </form>
+<a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
 </body>
 </html>
