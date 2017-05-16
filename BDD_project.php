@@ -30,56 +30,36 @@ catch(Exception $e)
 <body>
 
    <form method="post" action="path.php">
-
    <div id ="con">
-        
         <div id ="depart">
-                
-                 <label > Ville de départ   : </label>
-                <select name="vdepart" id="selector" >
-                    <?php
-      foreach($villes as $donnees)
-            {
-                echo '<option  value="'.$donnees['NomV'].'">'.$donnees['NomV'] . '</option>';
-            
-            }
+            <label > Ville de départ   : </label>
+            <select name="vdepart" id="selector" >
+            <?php
+              foreach($villes as $donnees)
+              {
+                echo '<option  value="'.$donnees['NomV'].'">'.$donnees['NomV'] . '</option>';  
+              }
+            ?>  
+            </select>
 
-                    ?>
-               
-                </select>
-
-
-                <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
-
+            <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
 
         <div id ="con">
-        
-        <div id ="depart">
-                
-                 <label > Ville d'arrivee  : </label>
-                <select name="varrivee" id="selector" >
-                    <?php
-      foreach($villes as $donnees)
-            {
+          <div id ="depart">              
+            <label > Ville d'arrivee  : </label>
+            <select name="varrivee" id="selector" >
+            <?php
+              foreach($villes as $donnees)
+              {
                 echo '<option value="'.$donnees['NomV'].'">'.$donnees['NomV'] . '</option>';
-               
-            }
-                    ?>
-               
-                </select>
-
-
-                <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
-
+              }
+            ?>   
+            </select>
+            <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
-
-      
-     <button type="submit" <a >Valider </a> </button>
-
+        <button type="submit" <a >Valider </a> </button>
       </form>
-
- 
     </body>
     </html>        
   
