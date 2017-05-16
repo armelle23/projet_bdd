@@ -1,0 +1,13 @@
+on a 
+	page connexion sans BDD
+	page choix ville
+	validation affiche trajet
+	page admin
+	ville & autoroute : ajout (sécurisé) / supprimer
+	troncons : supprimé
+	modifié ville /troncons / autoroute
+	
+Besoin
+	fiche calcul de trajet
+	ajout troncons --> beug	
+	
