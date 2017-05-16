@@ -12,11 +12,12 @@
      <br> <br>
     <a href="ajouter_troncon.php" target="_blank"> <input type="button" value="Ajouter Tronçon"> </a>
     <a href="supprimer_troncon.php" target="_blank"> <input type="button" value="Supprimer Tronçon"> </a>
-    <a href="supprimer.php" target="_blank"> <input type="button" value="Modifier Tronçon"> </a>
+    <a href="modif_troncons.php" target="_blank"> <input type="button" value="Modifier Tronçon"> </a>
    <br> <br>
     <a href="ajouter_autoroute.php" target="_blank"> <input type="button" value="Ajouter Autoroute "> </a>
     <a href="supprimer_autoroute.php" target="_blank"> <input type="button" value="Supprimer Autoroute"> </a>
-    <a href="supprimer.php" target="_blank"> <input type="button" value="Modifier Autoroute"> </a>
+    <a href="modif_auto.php" target="_blank"> <input type="button" value="Modifier Autoroute"> </a>
        
 </body>
+  
 </html>

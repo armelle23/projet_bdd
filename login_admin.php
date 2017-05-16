@@ -35,6 +35,9 @@
 
     </div>
 
+    <img  src="auto.png" alt="Photo de montagne" />
+
+
 
 </div>
 </body>
