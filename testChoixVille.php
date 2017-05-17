@@ -24,7 +24,7 @@
         </head>
  
 <body>
-     <form method="post" action="path.php">
+     <form method="post" action="testChoixVilleArrive.php">
      <div id ="con">
         <div id ="depart">            
             <label > Ville de départ   : </label>

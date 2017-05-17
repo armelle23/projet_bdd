@@ -8,7 +8,22 @@
     {
         die('Erreur : '.$e->getMessage());
     }
-    $reponse = $bdd->query('SELECT NomV FROM ville ORDER BY NomV');
+
+
+    $vdepart= $_POST['vdepart'];
+    $codePostal = $bdd-> prepare ("SELECT CodeP FROM ville WHERE NomV = '$vdepart'"); 
+    $codePostal->execute();
+    
+    $codePo = $codePostal->fetchAll()[0]['CodeP'];
+
+    $codeAuto = $bdd->prepare ("SELECT CodeA_Autoroute FROM ville v, sortie s, troncon t WHERE  s.CodT = t.CodT AND v.CodeP = '$codePo'"); 
+    $codeAuto->execute();
+
+    $code = $codeAuto->fetchAll()[0]['CodeA_Autoroute'];
+
+    $reponse = $bdd->prepare("SELECT v.NomV FROM ville v, sortie s, troncon t WHERE v.CodeP = s.CodeP AND s.CodT = t.CodT AND t.codeA = '$code'");
+    $reponse->execute();
+
     $villes = $reponse->fetchAll();
 ?>
 
