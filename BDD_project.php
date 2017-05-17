@@ -45,8 +45,7 @@ catch(Exception $e)
             <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
 
-        <div id ="con">
-          <div id ="depart">              
+        <div id ="con" id ="depart">              
             <label > Ville d'arrivee  : </label>
             <select name="varrivee" id="selector" >
             <?php
