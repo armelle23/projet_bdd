@@ -1,10 +1,13 @@
 <html>
   <head>
-    <title>Ajouter Ville</title>
+    <title>Ajouterun tronçon </title>
+     <link href="style.css" rel="stylesheet">
   </head>
 <body>
+<?php include "menu.php"; ?>
+<div class="container">
 <form name="insertion" action="ajouter_postT.php" method="POST">
-  <table border="0" align="center" cellspacing="2" cellpadding="2">
+  <table border="0" align="center" cellspacing="10" cellpadding="6">
 
    <tr align="center">
       <td>Code tronçon </td>
@@ -31,5 +34,7 @@
   </table>
 </form>
 <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+</div>
+  <?php include "footer.php"; ?>
 </body>
 </html>

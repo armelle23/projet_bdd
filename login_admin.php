@@ -2,10 +2,13 @@
 <html>
 <head>
    <link href="login.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title></title>
 </head>
 <body>
+
+
 <div id="container">
 
     <div id="login">
@@ -35,10 +38,9 @@
 
     </div>
 
-    <img  src="auto.png" alt="Photo de montagne" />
-
-
 
 </div>
+<?php include "footer.php"; ?>
 </body>
+
 </html>

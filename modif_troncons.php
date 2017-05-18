@@ -28,5 +28,6 @@
 	</div>
 
 <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+
 </body>
 </html>

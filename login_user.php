@@ -2,6 +2,7 @@
 <html>
 <head>
    <link href="login.css" rel="stylesheet">
+   <link href="style.css" rel="stylesheet">
 
     <title></title>
      
@@ -42,9 +43,6 @@
 
 </div>
 </body>
+<?php include "footer.php"; ?>
 
-
-                      
-                  
-   
 </html>

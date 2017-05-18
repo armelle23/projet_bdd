@@ -21,7 +21,7 @@ catch(Exception $e)
  
   if($reponse)
   {
-    echo("Vous avez surpirrmerville ") ;
+    echo("Vous avez supprimé une ville ") ;
   }
   else
   {
@@ -31,9 +31,15 @@ catch(Exception $e)
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Supprimer Ville</title>
+   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+      <br></br>
+      <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+       <div class="centrer">
+        <img class="centrer" src="done.jpg" alt="entrée" />
+        </div>
+    <?php include "footer.php"; ?>
 </body>
 </html>

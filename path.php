@@ -34,6 +34,7 @@ catch(Exception $e)
 
 </head>
 <body>
+
 <form method="post" action="BDD_project.php">
 <div id="container">
 
@@ -57,7 +58,6 @@ catch(Exception $e)
         
 
      <button type="submit" <a >Valider </a> </button>
-
 
 
 

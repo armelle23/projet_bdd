@@ -17,7 +17,7 @@ catch(Exception $e)
 </head>
 
 <body>
-
+<?php include "menu.php"; ?>
 	<div class="container">
 		<div class="text">
 			<?php
@@ -60,5 +60,6 @@ catch(Exception $e)
 			?>
 		</div>
 	</div>
+	<?php include "footer.php"; ?>
 </body>
 </html>

@@ -1,26 +1,59 @@
+<?php
+  
+  try
+                {
+                  
+                  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                        die('Erreur : '.$e->getMessage());
+                }
+
+           $reponse = $bdd->query('SELECT CodeA FROM autoroute ');
+           $autoroutes = $reponse->fetchAll();
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
-
+<head>
+	<title>Modifier Autoroute</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+ 
 <body>
-	
+<?php include "menu.php"; ?>
 
-	<div class="container">
-		<div class="text">
-			<form method="post" action="modif_postA.php">
-				<label for="product"> Code Autoroute</label>
-				<input type="Name"   name="CodeA" required>
-				<br><br>
-
-				<label for="price"> Nouveau kilométrage</label>
-				<input type="Name" name="KmT" required>
-				<br><br>
-
-				<input type="submit" value="Save information" >
-				<a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
-			</form>
-		</div>
-	</div>
-
-
+<form name="insertion" action="modif_postA.php" method="POST">
+      <table border="0" align="center" cellspacing="50" cellpadding="2">
+        <tr align="center">
+         
+          <td> Code d'autoroute :
+                      <select name="CodeA" id="selector" >
+                          <?php
+            foreach($autoroutes as $donnees)
+                  {
+                      echo '<option  value="'.$donnees['CodeA'].'">'.$donnees['CodeA'] . '</option>';
+                  
+                  }
+                          ?>
+                     
+                      </select>
+			</td>
+        </tr>
+        <tr align="center">
+          <td>Nouveau kilométrage</td>
+          <td><input type="text" name="KmT"></td>
+        </tr>
+        <tr align="center">
+          <td colspan="2"><input type="submit" value="Modifier"></td>
+        </tr>
+      </table>
+</form>
 </body>
+
+<?php include "footer.php"; ?>
 </html>

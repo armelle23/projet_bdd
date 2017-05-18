@@ -14,51 +14,55 @@ catch(Exception $e)
             $villes = $reponse->fetchAll();
             ?>
 
+
 <!doctype html>
 <html>
     <head>
       <meta charset="utf-8">
      
-      <title>Test2</title>
+      <title>Supprimer Ville</title>
      
      <link href="bibou.css" rel="stylesheet">
+      <link href="style.css" rel="stylesheet">
      
     
     </head>
- 
-<body>
+    <?php include "menu.php"; ?>
+      <body>
 
-   <form method="get" action="supprimer_postV.php">
+         <form method="get" action="supprimer_postV.php">
 
-   <div id ="con">
-        
-        <div id ="depart">
-                
-                 <label > Ville a supprimer  : </label>
-                <select name="CodeP" id="selector" >
-                    <?php
-     foreach($villes as $donnees)
-            {
-                echo '<option  value="'.$donnees['CodeP'].'">'.$donnees['NomV'] . '</option>';
-            
-            }
+             <div id ="con">
+                  
+                  <div id ="depart">
+                           <br></br> <br></br>
+                           <label > Ville a supprimer  : </label>
+                          <select name="CodeP" id="selector" >
+                              <?php
+               foreach($villes as $donnees)
+                      {
+                          echo '<option  value="'.$donnees['CodeP'].'">'.$donnees['NomV'] . '</option>';
+                      
+                      }
 
-                    ?>
-               
-                </select>
+                              ?>
+                         
+                          </select>
 
 
-                <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
+                          <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
 
-        </div>
+                  </div>
+               </div>
 
-       
-     <button type="submit" <a >Supprimer </a> </button>
-     <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+                 <br></br> <br></br> <br></br>
+              
+                <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+                <button type="submit" <a >Supprimer </a> </button> 
 
-      </form>
+            </form>
 
- 
-    </body>
+        <?php include "footer.php"; ?>
+          </body>
     </html>        
   

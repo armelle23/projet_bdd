@@ -2,6 +2,7 @@
 
 <html>
 <head>
+     <link href="login.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <title> Projet BDD - Choix des types</title>
@@ -17,7 +18,7 @@
 		</div>
 		<div class="choice">
 			<div class="button"><a href="villes.php">Ville</a></div>
-			<div class="button"><a href="entreprise.php">Péage </a></div>
+			<div class="button"><a href="villes.php">Péage</a></div>
 		</div> 
 	</div>
 
