@@ -1,28 +1,28 @@
 <?php
-	 try
-{
-  
-  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+				 try
+			{
+			  
+			  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
+			}
+			catch(Exception $e)
+			{
+			        die('Erreur : '.$e->getMessage());
+			}
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
+<link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<div class="container">
 		<div class="text">
 			<?php
 			
-			if (isset($_POST['CodeA'])) {
+			if (isset($_POST['CodT'])) {
 				
 				$query = "SELECT * FROM troncon WHERE CodT=:CodT";
 				$query_params = array(
@@ -108,8 +108,12 @@ catch(Exception $e)
 			}
 			?>
 		</div>
-	</div>
+	
 	<a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+	<div class="centrer">
+              <img class="centrer" src="done.jpg" alt="entrée" />
+              </div>
+	<?php include "footer.php"; ?>
 	
 </body>
 </html>

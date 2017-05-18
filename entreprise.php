@@ -1,45 +1,54 @@
-<!DOCTYPE HTML>
+<?php
+  
+  try
+                {
+                  
+                  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                        die('Erreur : '.$e->getMessage());
+                }
 
+           $reponse = $bdd->query('SELECT NomE FROM entreprise ');
+           $autoroutes = $reponse->fetchAll();
+?>
+
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <title> Projet BDD - Choix des types</title>
+	<title>Modifier Autoroute</title>
+    <link href="style.css" rel="stylesheet">
 </head>
-
+ 
 <body>
-	<?php include "menu.php"; ?>
-	
-	<div class="container">
-		<div class="contenu">
-			<div class="liste">
-				<div>blablabla</div>
-				<div>blablabla</div>
-				<div>blablabla</div>
-				<div>blablabla</div>
-				<div>blablabla</div>
-				<div>blablabla</div>
-			</div>
-			<div class="durée">
-				<div>Jours</div>
-				<div>Jours</div>
-				<div>Jours</div>
-				<div>Jours</div>
-				<div>Jours</div>
-				<div>Jours</div>
-			</div>
-			<div class="gain">
-				<div>€</div>
-				<div>€</div>
-				<div>€</div>
-				<div>€</div>
-				<div>€</div>
-				<div>€</div>
-			</div>
-		</div>
-	</div>
+<?php include "menu.php"; ?>
 
-	<?php include "footer.php"; ?>
+<form name="insertion" action="entreprise_POST.php" method="POST">
+      <table border="0" align="center" cellspacing="50" cellpadding="2">
+        <tr align="center">
+         
+          <td> Nos partenaires :
+                      <select name="NomE" id="selector" >
+                          <?php
+            foreach($autoroutes as $donnees)
+                  {
+                      echo '<option  value="'.$donnees['NomE'].'">'.$donnees['NomE'] . '</option>';
+                  
+                  }
+                          ?>
+                     
+                      </select>
+			</td>
+        </tr>
+          <td colspan="2"><input type="submit" value="Vérifier données"></td>
+        </tr>
+      </table>
+</form>
 </body>
-
+ <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+<?php include "footer.php"; ?>
 </html>
