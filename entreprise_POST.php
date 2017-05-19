@@ -58,12 +58,14 @@
                         echo 'ATTENTION : Contrat Fini !';
                       }
 
-                          $DateActuelle = date('Y');
-                          $result = $donnees['DateFin'] - $DateActuelle;
-                          echo 'Il reste ';
-                          echo $result ;
-                          echo 'ans de contrat';
+                      else{
+                            $DateActuelle = date('Y');
+                              $result = $donnees['DateFin'] - $DateActuelle;
+                              echo 'Il reste ';
+                              echo $result ;
+                              echo ' ans de contrat';
 
+                      }     
                   }
                   
                           ?>
@@ -91,6 +93,6 @@
 <div class="centrer">
               <img class="centrer" src="autoto.jpg" alt="entrée" />
               </div>
- <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+ <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 <?php include "footer.php"; ?>
 </html>

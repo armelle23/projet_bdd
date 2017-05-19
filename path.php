@@ -1,17 +1,12 @@
-
-
 <?php
-
-            try
-{
-  
-  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
+    try
+    {
+      $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
+    }
+    catch(Exception $e)
+    {
         die('Erreur : '.$e->getMessage());
-}
-
+    }
 ?>
 
 
@@ -34,27 +29,30 @@ catch(Exception $e)
 
 </head>
 <body>
+<<<<<<< HEAD
 
 <form method="post" action="BDD_project.php">
 <div id="container">
 
+=======
+    <form method="post" action="BDD_project.php">
+        <div id="container">
+>>>>>>> c092a289c0bac892bf5e135015b24efd1aede14b
             <div id="login">
-                
                     <strong>Ville de depart </strong> <?php echo $_POST['vdepart'];  ?> 
-                    
             </div>
-                <div class="content">   
-                </div>
+            <div class="content">   
+        
             </div>
-    <div id="container">
+        </div>
+        <div id="container">
             <div id="login">
- 
                <strong>Ville d'arrivée</strong> <?php echo $_POST['varrivee'];  ?>
-
-     </div>
-                <div class="content">   
-                </div>
             </div>
+            <div class="content">   
+        
+            </div>
+        </div>
         
 
      <button type="submit" <a >Valider </a> </button>
