@@ -1,20 +1,9 @@
-
 <?php
-
-         try
-            {
-              
-              $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-            }
-         catch(Exception $e)
-            {
-                    die('Erreur : '.$e->getMessage());
-            }
-
-            
-           $reponse = $bdd->query('SELECT CodeA , CodT FROM troncon ORDER BY CodeA');
-            $troncon = $reponse->fetchAll();
-            ?>
+  require "config.php";
+       
+  $reponse = $bdd->query('SELECT CodeA , CodT FROM troncon ORDER BY CodeA');
+  $troncon = $reponse->fetchAll();
+?>
  
 <!doctype html>
 <html>

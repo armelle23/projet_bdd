@@ -1,23 +1,11 @@
 <?php
- 
-            try
-{
-  
-  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+     require "config.php";
   $CodeP  = $_GET["CodeP"] ;
 
 
 
     $reponse = $bdd->query('DELETE FROM ville where CodeP='.$CodeP);
   $reponse->execute();
- 
-
- 
  
   if($reponse)
   {
@@ -28,12 +16,14 @@ catch(Exception $e)
     echo(" échoué") ;
   }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Supprimer Ville</title>
    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
       <br></br>
       <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>

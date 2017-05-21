@@ -1,17 +1,9 @@
 <?php
   
-  try
-                {
-                  
-                  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-                }
-                catch(Exception $e)
-                {
-                        die('Erreur : '.$e->getMessage());
-                }
+    require "config.php";
 
-           $reponse = $bdd->query('SELECT CodeA FROM autoroute ');
-           $autoroutes = $reponse->fetchAll();
+   $reponse = $bdd->query('SELECT CodeA FROM autoroute ');
+   $autoroutes = $reponse->fetchAll();
 ?>
 
 

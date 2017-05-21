@@ -1,13 +1,6 @@
 
 <?php
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-    }
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
+    require "config.php";
     $reponse = $bdd->query('SELECT NomV FROM ville ORDER BY NomV');
     $villes = $reponse->fetchAll();
 ?>
@@ -38,7 +31,7 @@
             </select>
             <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
-        <button type="submit" <a> Valider </a> </button>
+        <button type="submit" <a>Valider </a> </button>
     </div>
     </form>
 </body>

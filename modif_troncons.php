@@ -1,19 +1,9 @@
-
 <?php
+  require "config.php";
 
-      try
-                {
-                  
-                  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-                }
-                catch(Exception $e)
-                {
-                        die('Erreur : '.$e->getMessage());
-                }
-
-           $reponse = $bdd->query('SELECT CodT FROM troncon ');
-           $villes = $reponse->fetchAll();
-     ?>
+  $reponse = $bdd->query('SELECT CodT FROM troncon ');
+  $villes = $reponse->fetchAll();
+?>
 
 
 

@@ -1,21 +1,12 @@
 <?php
-  
-  try
-                {
-                  
-                  $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-                }
-                catch(Exception $e)
-                {
-                        die('Erreur : '.$e->getMessage());
-                }
+  require "config.php";
 
-              $NomE  = $_POST["NomE"] ;
-           $reponse = $bdd->query("SELECT CA, DateFin FROM entreprise e WHERE e.NomE = '$NomE' ");
-           $autoroutes = $reponse->fetchAll();
+  $NomE  = $_POST["NomE"] ;
+  $reponse = $bdd->query("SELECT CA, DateFin FROM entreprise e WHERE e.NomE = '$NomE' ");
+  $autoroutes = $reponse->fetchAll();
 
-           $peage = $bdd->query("SELECT NumP , Tarif FROM peage p , entreprise e WHERE e.CodeE = p.CodeE AND '$NomE' = e.NomE ");
-            $autoroutes2 = $peage->fetchAll();
+  $peage = $bdd->query("SELECT NumP , Tarif FROM peage p , entreprise e WHERE e.CodeE = p.CodeE AND '$NomE' = e.NomE ");
+  $autoroutes2 = $peage->fetchAll();
 ?>
 
 

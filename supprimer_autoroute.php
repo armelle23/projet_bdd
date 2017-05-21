@@ -2,21 +2,11 @@
 
 <?php
 
-        try
-          {
-            
-            $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-          }
+  require "config.php";
 
-      catch(Exception $e)
-            {
-                    die('Erreur : '.$e->getMessage());
-            }
-               
-
-          $reponse = $bdd->query('SELECT CodeA FROM autoroute ORDER BY CodeA');
-          $autoroutes = $reponse->fetchAll();
-            ?>
+  $reponse = $bdd->query('SELECT CodeA FROM autoroute ORDER BY CodeA');
+  $autoroutes = $reponse->fetchAll();
+?>
 
 <!doctype html>
 <html>

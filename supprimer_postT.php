@@ -1,24 +1,11 @@
 <?php
 
-        try
-        {
-          
-          $bdd = new PDO('mysql:host=localhost;dbname=routes;charset=utf8', 'root', '');
-        }
-      catch(Exception $e)
-        {
-                die('Erreur : '.$e->getMessage());
-        }
+  require "config.php";
 
-       $CodT  = $_GET["CodT"] ;
+  $CodT  = $_GET["CodT"] ;
 
-
-
-   $reponse = $bdd->query('DELETE FROM troncon where CodT='.$CodT);
-    $reponse->execute();
- 
-
- 
+  $reponse = $bdd->query('DELETE FROM troncon where CodT='.$CodT);
+  $reponse->execute();
  
   if($reponse)
   {
