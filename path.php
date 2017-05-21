@@ -32,9 +32,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 <form method="post" action="BDD_project.php">
 <div id="container">
        <div id="login">
@@ -46,25 +43,23 @@
             $codePostalDepart->execute();
             $codeDepart = $codePostalDepart->fetchAll()[0]['CodeP'];
 
-            print_r($codeDepart);
+            print_r("code depart ".$codeDepart);
 
             $KmDepart = $bdd->prepare("SELECT t.DuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeDepart' AND s.CodT = t.CodT"); 
             $KmDepart->execute();
             $kmDebut = $KmDepart->fetchAll()[0]['DuKm'];
-
-            print_r($kmDebut);
+            print_r("km debut : ".$kmDebut);
 
           $codePostalArrive =  $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$varrivee'"); 
             $codePostalArrive->execute();
             $codeArrive = $codePostalArrive->fetchAll()[0]['CodeP'];
 
-            print_r($codeArrive);
+            print_r("code arrive : ".$codeArrive);
 
-            $KmFin = $bdd->prepare("SELECT t.AuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); // CODE A A AJOUTER
+            $KmFin = $bdd->prepare("SELECT t.AuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
             $KmFin->execute();
             $KmArrive = $KmFin->fetchAll()[0]['AuKm'];
-
-            print_r($KmArrive);
+            print_r("km arrive : ".$KmArrive);
 
             $troncons = $bdd->prepare("SELECT CodT FROM troncon WHERE DuKm >= '$kmDebut' AND AuKm <= '$KmArrive' ORDER BY CodT ASC");
             $troncons->execute();

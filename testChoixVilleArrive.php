@@ -11,16 +11,16 @@
 
     $vdepart= $_POST['vdepart'];
     print_r($vdepart);
-    
+
     $codePostal = $bdd-> prepare ("SELECT CodeP FROM ville WHERE NomV = '$vdepart'"); 
     $codePostal->execute();
     $codePo = $codePostal->fetchAll()[0]['CodeP'];
-    print_r($codePo);
+    print_r("code postal ".$codePo);
 
-    $codeAuto = $bdd->prepare ("SELECT CodeA_Autoroute FROM ville v, sortie s, troncon t WHERE  s.CodT = t.CodT AND v.CodeP = '$codePo'"); 
+    $codeAuto = $bdd->prepare ("SELECT t.CodeA_Autoroute FROM ville v, sortie s, troncon t WHERE  s.CodT = t.CodT AND s.CodeP = '$codePo'"); 
     $codeAuto->execute();
     $code = $codeAuto->fetchAll()[0]['CodeA_Autoroute'];
-    print_r($code);
+    print_r("autoroute : ".$code);
 
     $reponse = $bdd->prepare("SELECT v.NomV FROM ville v, sortie s, troncon t WHERE v.CodeP = s.CodeP AND s.CodT = t.CodT AND t.CodeA_Autoroute = '$code'");
     $reponse->execute();
