@@ -1,4 +1,3 @@
-
 <?php
     try
     {
@@ -11,20 +10,22 @@
 
 
     $vdepart= $_POST['vdepart'];
+    print_r($vdepart);
+
     $codePostal = $bdd-> prepare ("SELECT CodeP FROM ville WHERE NomV = '$vdepart'"); 
     $codePostal->execute();
-    
     $codePo = $codePostal->fetchAll()[0]['CodeP'];
+    print_r($codePo);
 
     $codeAuto = $bdd->prepare ("SELECT CodeA_Autoroute FROM ville v, sortie s, troncon t WHERE  s.CodT = t.CodT AND v.CodeP = '$codePo'"); 
     $codeAuto->execute();
-
     $code = $codeAuto->fetchAll()[0]['CodeA_Autoroute'];
+    print_r($code);
 
-    $reponse = $bdd->prepare("SELECT v.NomV FROM ville v, sortie s, troncon t WHERE v.CodeP = s.CodeP AND s.CodT = t.CodT AND t.codeA = '$code'");
+    $reponse = $bdd->prepare("SELECT v.NomV FROM ville v, sortie s, troncon t WHERE v.CodeP = s.CodeP AND s.CodT = t.CodT AND t.CodeA_Autoroute = 'A9'");
     $reponse->execute();
-
     $villes = $reponse->fetchAll();
+    print_r($villes);
 ?>
 
 <!doctype html>
@@ -42,7 +43,18 @@
      <form method="post" action="path.php">
      <div id ="con">
         <div id ="depart">
-            <label > Ville d'arrivee  : </label>
+            <!-- <input type="hidden" name="vdepart" value='vdepart' /> --> 
+            <?php ?> 
+            <select name="vDepart" id="selector" >
+            <?php  echo '<option value="'.$vdepart.'">'.$vdepart . '</option>';     /*
+               foreach($vdepart as $donnees)
+                {
+                    echo '<option value="'.$donnees['NomV'].'">'.$donnees['NomV'] . '</option>';      
+                }*/
+            ?>
+            </select>
+
+             <label > Ville d'arrivee  : </label>
             <select name="varrivee" id="selector" >
             <?php
                 foreach($villes as $donnees)
