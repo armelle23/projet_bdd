@@ -34,10 +34,10 @@
 <form method="post" action="BDD_project.php">
 <div id="container">
 
-=======
+
     <form method="post" action="BDD_project.php">
         <div id="container">
->>>>>>> c092a289c0bac892bf5e135015b24efd1aede14b
+
             <div id="login">
                     <strong>Ville de depart </strong> <?php echo $_POST['vdepart'];  ?> 
             </div>

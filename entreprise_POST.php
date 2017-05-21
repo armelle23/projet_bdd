@@ -19,10 +19,6 @@
 ?>
 
 
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,6 +39,7 @@
             foreach($autoroutes as $donnees)
                   {
                       echo '<option  value="'.$donnees['CA'].'">'.$donnees['CA'] . '</option>';
+
                   
                   }
                           ?>
@@ -52,14 +49,14 @@
                           <?php
             foreach($autoroutes as $donnees)
                   {
-                      echo '<option  value="'.$donnees['DateFin'].'">'.$donnees['DateFin'] . '</option>';
+                      echo '<option>'.$donnees['DateFin'] . '</option>';
                       if($donnees['DateFin'] < 2017)
                       {
                         echo 'ATTENTION : Contrat Fini !';
                       }
 
                       else{
-                            $DateActuelle = date('Y');
+                              $DateActuelle = date('Y');
                               $result = $donnees['DateFin'] - $DateActuelle;
                               echo 'Il reste ';
                               echo $result ;
@@ -76,10 +73,10 @@
                           <?php
             foreach($autoroutes2 as $donnees)
                   {
-                      echo '<option>'.$donnees['NumP'] . '</option>';
+                      echo '<div>'.$donnees['NumP'] . '</div>';
                       echo 'Prix du péage : ';
-                      echo '<option>'.$donnees['Tarif'] . '</option>';
-                      echo 'euros';
+                      echo '<div>'.$donnees['Tarif'] . ' €</option>';
+                      
                      
                   
                   }
