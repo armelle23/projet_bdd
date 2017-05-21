@@ -37,29 +37,8 @@
 
 <form method="post" action="BDD_project.php">
 <div id="container">
-
-
-    <form method="post" action="BDD_project.php">
-        <div id="container">
-
-            <div id="login">
-                    <strong>Ville de depart </strong> <?php echo $_POST['vdepart'];  ?> 
-            </div>
-            <div class="content">   
-        
-            </div>
-        </div>
-        <div id="container">
-            <div id="login">
-               <strong>Ville d'arrivée</strong> <?php echo $_POST['varrivee'];  ?>
-            </div>
-            <div class="content">   
-        
-            </div>
-=======
-        <div id="login">
+       <div id="login">
             <strong>Ville de depart </strong> <?php echo $vDepart;  ?> 
->>>>>>> 39ffc72433ee20a82588d90c68ab364e47636f67
         </div>
 
         <?php
@@ -90,9 +69,6 @@
             $troncons = $bdd->prepare("SELECT CodT FROM troncon WHERE DuKm >= '$kmDebut' AND AuKm <= '$KmArrive' ORDER BY CodT ASC");
             $troncons->execute();
 
-<<<<<<< HEAD
-   
-=======
             $trajet = $troncons->fetchAll();
             print_r($trajet);
 
@@ -102,7 +78,7 @@
         <div id="login">
            <strong>Ville d'arrivée</strong> <?php echo $varrivee;  ?>
         </div>  
->>>>>>> 39ffc72433ee20a82588d90c68ab364e47636f67
+    </div>
 </body>
 </html>
 

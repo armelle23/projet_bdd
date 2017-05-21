@@ -18,7 +18,7 @@
         </div>
 
         <div class="content">
-            <form  action="BDD_project.php">
+            <form  action="testChoixVille.php">
 
 
                 <div class="form-control">

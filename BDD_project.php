@@ -30,47 +30,7 @@
  
 <body>
 
-   <form method="post" action="path.php">
-<<<<<<< HEAD
-
-         <div id ="con">
-              
-              <div id ="depart">
-                      
-                       <label > Ville de départ   : </label>
-                      <select name="vdepart" id="selector" >
-                          <?php
-            foreach($villes as $donnees)
-                  {
-                      echo '<option  value="'.$donnees['NomV'].'">'.$donnees['NomV'] . '</option>';
-                  
-                  }
-                          ?>
-                     
-                      </select>
-
-              </div>
-
-              <div id ="con">
-              
-              <div id ="depart">
-                      
-                       <label > Ville d'arrivee  : </label>
-                      <select name="varrivee" id="selector" >
-                          <?php
-            foreach($villes as $donnees)
-                  {
-                      echo '<option value="'.$donnees['NomV'].'">'.$donnees['NomV'] . '</option>';
-                     
-                  }
-                          ?>
-                     
-                      </select>
-
-              </div> 
-           <button type="submit" <a >Valider </a> </button>
-
-=======
+   <form method="post" action="testChoixVille.php">
    <div id ="con">
         <div id ="depart">
             <label > Ville de départ   : </label>
@@ -99,7 +59,6 @@
             <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
         <button type="submit" <a >Valider </a> </button>
->>>>>>> c092a289c0bac892bf5e135015b24efd1aede14b
       </form>
     </body>
     <?php include "footer.php"; ?>

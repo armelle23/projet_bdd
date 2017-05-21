@@ -38,7 +38,7 @@
             </select>
             <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
-        <button type="submit" <a >Valider </a> </button>
+        <button type="submit" <a> Valider </a> </button>
     </div>
     </form>
 </body>
