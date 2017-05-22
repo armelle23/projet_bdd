@@ -26,7 +26,7 @@
 
 <body>
       <br></br>
-      <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+      <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
        <div class="centrer">
         <img class="centrer" src="done.jpg" alt="entrée" />
         </div>

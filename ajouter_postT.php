@@ -10,11 +10,10 @@
   $DuKm= $_POST["DuKm"] ;
   $AuKm= $_POST["AuKm"] ;
 
-  
-  
- 
-  $sql = "INSERT  INTO troncon (CodT, CodeA, DuKm , AuKm )
-            VALUES ( '$CodT', '$CodA', '$DuKm' , '$Aukm', '$CodA') " ;
+
+
+  $sql = "INSERT  INTO troncon (CodT, CodeA, DuKm , AuKm  )
+            VALUES ( '$CodT', '$CodeA', '$DuKm' , '$AuKm' )" ;
  
 
   $requete = mysql_query($sql, $cnx) or die( mysql_error() ) ;

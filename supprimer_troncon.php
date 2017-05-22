@@ -1,7 +1,7 @@
 <?php
   require "config.php";
        
-  $reponse = $bdd->query('SELECT CodeA , CodT FROM troncon ORDER BY CodeA');
+  $reponse = $bdd->query('SELECT  CodT FROM troncon ORDER BY CodeA');
   $troncon = $reponse->fetchAll();
 ?>
  
@@ -33,7 +33,7 @@
                           <?php
            foreach($troncon as $donnees)
                   {
-                      echo '<option  value="'.$donnees['CodT'].'">'.$donnees['CodeA'] . '</option>';
+                      echo '<option  value="'.$donnees['CodT'].'">'.$donnees['CodT'] . '</option>';
                   
                   }
 
@@ -48,7 +48,7 @@
               </div>
 
              <br></br> <br></br>
-            <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+            <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
            <button type="submit" <a >Supprimer </a> </button>
          
 
