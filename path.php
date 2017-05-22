@@ -7,42 +7,54 @@
     $codePostalDepart = $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$vDepart'"); 
     $codePostalDepart->execute();
     $codeDepart = $codePostalDepart->fetchAll()[0]['CodeP'];
-    //print_r("code depart ".$codeDepart);
+    print_r("code depart ".$codeDepart);
 
     $KmDepart = $bdd->prepare("SELECT t.DuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeDepart' AND s.CodT = t.CodT"); 
     $KmDepart->execute();
     $kmDebut = $KmDepart->fetchAll()[0]['DuKm'];
-    //print_r("km debut : ".$kmDebut);
+    print_r("km debut : ".$kmDebut);
 
     $codePostalArrive =  $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$varrivee'"); 
     $codePostalArrive->execute();
     $codeArrive = $codePostalArrive->fetchAll()[0]['CodeP'];
-    //print_r("code arrive : ".$codeArrive);
+    print_r("code arrive : ".$codeArrive);
             
  
-    $KmFin = $bdd->prepare("SELECT t.AuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
+    $KmFin = $bdd->prepare("SELECT t.AuKm, t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $KmFin->execute();
     $KmArrive = $KmFin->fetchAll()[0]['AuKm'];
-    //print_r("km arrive : ".$KmArrive);
+    print_r("km arrive : ".$KmArrive);
 
+    $CodeAuto = $bdd->prepare("SELECT t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
+    $CodeAuto->execute();
+    $codeRoute = $CodeAuto->fetchAll()[0]['CodeA_Autoroute'];
 
+    print_r("code autoroute : ".$codeRoute);
 
-    if ($codeArrive === $codeDepart) {
+    if ($codeArrive == $codeDepart) {
         $nbKm = 0;
     }
     else
     {
-        $troncons = $bdd->prepare("SELECT * FROM troncon WHERE DuKm >= '$kmDebut' AND AuKm <= '$KmArrive' ORDER BY CodT ASC");
+        $nbKm = $KmArrive - $kmDebut;
+
+        if ($nbKm < 0 )
+        {
+            $tmp = $KmArrive;
+            $KmArrive = $kmDebut;
+            $kmDebut = $tmp;
+            $nbKm = $KmArrive- $kmDebut;
+        }
+
+        $troncons = $bdd->prepare("SELECT * FROM troncon WHERE CodeA_Autoroute = '$codeRoute' AND AuKm >= '$kmDebut' AND DuKm <= '$KmArrive' ORDER BY CodT ASC");
         $troncons->execute();
         $trajet = $troncons->fetchAll();
-        //print_r($trajet);
-        
-        $sortie = $bdd->prepare("SELECT s.Numero FROM  sortie s WHERE s.CodeP = '$codeArrive'"); 
+        //print_r("Trajet : ".$trajet);
+
+        $sortie = $bdd->prepare("SELECT Numero FROM  sortie WHERE CodeP = '$codeArrive'"); 
         $sortie->execute();
         $sortir = $sortie->fetchAll()[0]['Numero'];
-        //print_r($sortir);        
-
-        $nbKm = $KmArrive- $kmDebut;
+        print_r("sortir : ".$sortir); 
     }  
 ?>
 
@@ -61,8 +73,6 @@
     <link href="login.css" rel="stylesheet">
     <link href="path.css" rel="stylesheet">
     <link href="team.css" rel="stylesheet">
-
-
 </head>
 <body>
 <form method="post" action="BDD_project.php">
@@ -88,8 +98,6 @@
                 echo "Faites le tour du périphérique on ne sait jamais ce que vous pourriez découvrir!";
         ?>    </div>         
     </div>
-    <a href="testChoixVille.php" > <input type="button" value="Retour"> </a>
 </body>
- 
 </html>
 
