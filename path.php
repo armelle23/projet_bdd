@@ -64,7 +64,7 @@
         $passage = $bdd ->prepare("SELECT NumP, Tarif, t.CodT FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
         $passage->execute();
         $visite = $passage->fetchAll();
-        print_r($visite);
+        //print_r($visite); 
     }  
 ?>
 
