@@ -46,6 +46,6 @@
       </table>
 </form>
 </body>
-
+  <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 <?php include "footer.php"; ?>
 </html>

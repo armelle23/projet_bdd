@@ -25,7 +25,7 @@
       </table>
 </form>
 
-<a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+<a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 
 </div>
 <?php include "footer.php"; ?>

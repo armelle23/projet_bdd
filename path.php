@@ -7,29 +7,29 @@
     $codePostalDepart = $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$vDepart'"); 
     $codePostalDepart->execute();
     $codeDepart = $codePostalDepart->fetchAll()[0]['CodeP'];
-    print_r("code depart ".$codeDepart);
+   
 
     $KmDepart = $bdd->prepare("SELECT t.DuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeDepart' AND s.CodT = t.CodT"); 
     $KmDepart->execute();
     $kmDebut = $KmDepart->fetchAll()[0]['DuKm'];
-    print_r("km debut : ".$kmDebut);
+    
 
     $codePostalArrive =  $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$varrivee'"); 
     $codePostalArrive->execute();
     $codeArrive = $codePostalArrive->fetchAll()[0]['CodeP'];
-    print_r("code arrive : ".$codeArrive);
+    
             
  
     $KmFin = $bdd->prepare("SELECT t.AuKm, t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $KmFin->execute();
     $KmArrive = $KmFin->fetchAll()[0]['AuKm'];
-    print_r("km arrive : ".$KmArrive);
+    
 
     $CodeAuto = $bdd->prepare("SELECT t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $CodeAuto->execute();
     $codeRoute = $CodeAuto->fetchAll()[0]['CodeA_Autoroute'];
 
-    print_r("code autoroute : ".$codeRoute);
+   
 
     if ($codeArrive == $codeDepart) {
         $nbKm = 0;
@@ -54,7 +54,7 @@
         $sortie = $bdd->prepare("SELECT Numero FROM  sortie WHERE CodeP = '$codeArrive'"); 
         $sortie->execute();
         $sortir = $sortie->fetchAll()[0]['Numero'];
-        print_r("sortir : ".$sortir); 
+       
     }  
 ?>
 

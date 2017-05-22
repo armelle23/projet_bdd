@@ -7,6 +7,8 @@
 
   $peage = $bdd->query("SELECT NumP , Tarif FROM peage p , entreprise e WHERE e.CodeE = p.CodeE AND '$NomE' = e.NomE ");
   $autoroutes2 = $peage->fetchAll();
+  $benef = $bdd->query("SELECT NumP, Tarif FROM peage p , entreprise e WHERE e.CodeE = p.CodeE AND '$NomE' = e.NomE ");
+  $money = $benef->fetchAll();
 ?>
 
 
@@ -18,21 +20,51 @@
 </head>
  
 <body>
-<?php include "menu.php"; ?>
+
 
 <form name="insertion" action="entreprise.php" method="POST">
       <table border="0" align="center" cellspacing="50" cellpadding="2">
         <tr align="center">
-         
-          <td> Chiffre d'affaire annuel:
-                     
-                          <?php
-            foreach($autoroutes as $donnees)
+
+        
+       
+
+<?php          
+
+ /* $result = array($benefice);
+   foreach ($array as $benefice => $element) {
+              
+               $result = $array[$benefice];
+              $result += $array[$benefice] ;
+                  echo $result ;
+                }*/
+
+                /*foreach($autoroutes as $donnees)
                   {
                       echo '<option  value="'.$donnees['CA'].'">'.$donnees['CA'] . '</option>';
 
                   
-                  }
+                  }*/
+?>
+
+       
+         
+          <td> Chiffre d'affaire annuel pour chaque péage: <br></br>
+                     
+                          <?php
+                              foreach ($money as $donnees) {
+
+                              
+                              echo " CA total pour peage numero " ;
+                              echo  $donnees['NumP'] . "<br />";
+
+                              $benefice = ($donnees['Tarif']* 100) ;
+                              
+                              echo $benefice . '€'."<br />";
+                            }
+
+
+      
                           ?>
 			</td>
       <td> Contrat fini en :
@@ -60,13 +92,14 @@
       </td>
 
 
-      <td> Numero Péage :                     
+      <td>                      
                           <?php
             foreach($autoroutes2 as $donnees)
                   {
+                      echo "Numero Péage :";
                       echo '<div>'.$donnees['NumP'] . '</div>';
                       echo 'Prix du péage : ';
-                      echo '<div>'.$donnees['Tarif'] . ' €</option>';
+                      echo '<div>'.$donnees['Tarif'] . ' €</option>'. "<br />";
                       
                      
                   

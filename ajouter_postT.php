@@ -9,11 +9,12 @@
   $CodeA= $_POST["CodeA"] ;
   $DuKm= $_POST["DuKm"] ;
   $AuKm= $_POST["AuKm"] ;
+  $CodeA_Autoroute = $CodeA;
 
 
 
-  $sql = "INSERT  INTO troncon (CodT, CodeA, DuKm , AuKm  )
-            VALUES ( '$CodT', '$CodeA', '$DuKm' , '$AuKm' )" ;
+  $sql = "INSERT  INTO troncon (CodT, CodeA, DuKm , AuKm , CodeA_Autoroute )
+            VALUES ( '$CodT', '$CodeA', '$DuKm' , '$AuKm'  , '$CodeA_Autoroute' )" ;
  
 
   $requete = mysql_query($sql, $cnx) or die( mysql_error() ) ;

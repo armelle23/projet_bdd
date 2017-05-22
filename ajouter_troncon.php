@@ -15,7 +15,7 @@
     </tr>
     <tr align="center">
       <td>Code Autoroute</td>
-      <td><input type="text" name="CodA"></td>
+      <td><input type="text" name="CodeA"></td>
     </tr>
     <tr align="center">
       <td>Kilometre initial </td>

@@ -47,7 +47,7 @@
 
                  <br></br> <br></br> <br></br>
               
-                <a href="panel_admin.php" target="_blank"> <input type="button" value="Retour"> </a>
+                <a href="panel_admin.php"> <input type="button" value="Retour"> </a>
                 <button type="submit" <a >Supprimer </a> </button> 
 
             </form>
