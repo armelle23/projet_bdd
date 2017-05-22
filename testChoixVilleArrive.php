@@ -22,11 +22,12 @@
             <meta name="description" content="">
         
             <title>Test2</title>
-            
+              <link href="style.css" rel="stylesheet">
          <link href="bibou.css" rel="stylesheet">
         </head>
  
 <body>
+
      <form method="post" action="path.php">
      <div id ="con">
         <div id ="depart">
@@ -36,7 +37,7 @@
                 echo '<option value="'.$vdepart.'">'.$vdepart . '</option>'; 
             ?>
             </select>
-
+        <div id ="depart">
              <label > Ville d'arrivee  : </label>
             <select name="varrivee" id="selector" >
             <?php
@@ -57,11 +58,17 @@
                     }
                 }  
             ?>
+            
             </select>
              <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
+        </div>
+
         <button type="submit" <a >Valider </a> </button>
-    </div>
+  
     </form>
+
+   <?php include "footer.php"; ?>
 </body>
+
 </html>        
