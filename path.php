@@ -62,6 +62,7 @@
     <link href="path.css" rel="stylesheet">
     <link href="team.css" rel="stylesheet">
 
+
 </head>
 <body>
 <form method="post" action="BDD_project.php">
@@ -87,6 +88,8 @@
                 echo "Faites le tour du périphérique on ne sait jamais ce que vous pourriez découvrir!";
         ?>    </div>         
     </div>
+    <a href="testChoixVille.php" > <input type="button" value="Retour"> </a>
 </body>
+ 
 </html>
 
