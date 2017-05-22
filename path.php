@@ -61,7 +61,6 @@
     <link href="login.css" rel="stylesheet">
     <link href="path.css" rel="stylesheet">
     <link href="team.css" rel="stylesheet">
-
 </head>
 <body>
 <form method="post" action="BDD_project.php">
