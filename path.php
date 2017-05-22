@@ -32,7 +32,7 @@
     }
     else
     {
-        $troncons = $bdd->prepare("SELECT CodT FROM troncon WHERE DuKm >= '$kmDebut' AND AuKm <= '$KmArrive' ORDER BY CodT ASC");
+        $troncons = $bdd->prepare("SELECT * FROM troncon WHERE DuKm >= '$kmDebut' AND AuKm <= '$KmArrive' ORDER BY CodT ASC");
         $troncons->execute();
         $trajet = $troncons->fetchAll();
         //print_r($trajet);
@@ -67,27 +67,25 @@
 <form method="post" action="BDD_project.php">
 <div id="container">
        <div id="login">
-            <strong>Ville de depart </strong> <?php echo $vDepart;?>
+            <strong>Ville de depart </strong> <?php echo $vDepart."<br/>";?>
+            <strong>Ville d'arrivée</strong> <?php echo $varrivee;?>
         </div>
-        <div id="login">
-            <strong> Les troncons d'autoroute à emprunter son : <br/> </strong>
+        <div id="login"> <strong> Les troncons d'autoroute à emprunter son : <br/> </strong> 
         <?php    
             if ($nbKm != 0) {
+                echo "Sur l'autoroute : ".$trajet[0]['CodeA']."<br/>";
                 foreach($trajet as $donnees)
                 {
-                    echo $donnees['CodT'].'<br/>'."\n";      
+                    echo "<pre>Troncons : ".$donnees['CodT'].'<br/>'."\n"."\t Dès le kilomètre : ".$donnees['DuKm'].'<br/>'."\n"." \tjusqu'au kilomètre : ".$donnees['AuKm'].'<br/>'."\n"."</pre>";      
                 }
                 ?> 
-                <div id="login"> <?php echo "Prendre la sortie : ".$sortir ?></div>
+                </div>
+                <div id="login"> <?php echo "Prendre la sortie : ".$sortir." vers ".$varrivee ?></div>
                 <div id="login"> <?php echo "Nombre de km parcouru entre les 2 villes : ".$nbKm; ?></div><?php
                 }
             else
                 echo "Faites le tour du périphérique on ne sait jamais ce que vous pourriez découvrir!";
-        ?>            
-        </div>
-
-
-        <div id="login"> <strong>Ville d'arrivée</strong> <?php echo $varrivee;  ?></div>  
+        ?>    </div>         
     </div>
 </body>
 </html>
