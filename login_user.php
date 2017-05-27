@@ -15,7 +15,7 @@
             Utilisateur
         </div>
         <div class="content">
-            <form method="post" action="connect.php">
+            <form method="post" action="testChoixVille.php">
                 <div class="form-control">
                     <label for="username">Identifiant</label>
                     <input type="text" name="username" id="username" required/>
