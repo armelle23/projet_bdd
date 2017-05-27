@@ -86,11 +86,13 @@
             <strong>Ville de depart </strong> <?php echo $vDepart."<br/>";?>
             <strong>Ville d'arrivée</strong> <?php echo $varrivee;?>
         </div>
-        <div id="login"> <?php echo "Prendre la sortie : ".$sortir." vers ".$varrivee ?></div>
    
-        <div id="login"> <strong> Les troncons d'autoroute à emprunter son : <br/> </strong> 
+        <
         <?php    
             if ($nbKm != 0) {
+                ?>
+                <div id="login"> <?php echo "Prendre la sortie : ".$sortir." vers ".$varrivee ?></div>
+                <div id="login"> <strong> Les troncons d'autoroute à emprunter son : <br/> </strong> <?php
                 echo "Sur l'autoroute : ".$trajet[0]['CodeA']."<br/>";
                 foreach($trajet as $donnees)
                 {
