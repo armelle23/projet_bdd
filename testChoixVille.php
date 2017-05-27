@@ -35,7 +35,6 @@
                 </div>
 
                 <button type="submit" <a>Valider </a> </button>
-                <a href="login_user.php" > <input type="button" value="Deconnexion"> </a>
     </div>
     </div>
     </form>

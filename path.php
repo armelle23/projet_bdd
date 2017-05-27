@@ -56,7 +56,7 @@
 
         $passage = $bdd ->prepare("SELECT NumP, Tarif, t.CodT FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
         $passage->execute();
-        $visite = $passage->fetchAll();s
+        $visite = $passage->fetchAll();
     }  
 ?>
 
@@ -75,15 +75,19 @@
     <link href="login.css" rel="stylesheet">
     <link href="path.css" rel="stylesheet">
     <link href="team.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<?php include "menu_2.php"; ?>
+    <?php include "menu_2.php"; ?>
 <form method="post" action="BDD_project.php">
+<br><br>
 <div id="container">
        <div id="login">
             <strong>Ville de depart </strong> <?php echo $vDepart."<br/>";?>
             <strong>Ville d'arrivée</strong> <?php echo $varrivee;?>
         </div>
+        <div id="login"> <?php echo "Prendre la sortie : ".$sortir." vers ".$varrivee ?></div>
+   
         <div id="login"> <strong> Les troncons d'autoroute à emprunter son : <br/> </strong> 
         <?php    
             if ($nbKm != 0) {
@@ -92,19 +96,25 @@
                 {
                     echo "<pre>Troncons : ".$donnees['CodT'].'<br/>'."\n"."\t Dès le kilomètre : ".$donnees['DuKm'].'<br/>'."\n"." \tjusqu'au kilomètre : ".$donnees['AuKm'].'<br/>'."\n"."</pre>";      
                 }
+            }
                 ?> 
-                </div>
-                <div id="login"> <?php echo "Prendre la sortie : ".$sortir." vers ".$varrivee ?></div>
-                <div id="login"> <?php echo "Nombre de km parcouru entre les 2 villes : ".$nbKm; ?></div>
+        </div>
+        <?php    
+            if ($nbKm != 0) { ?>     
                 <div id="login"> <?php echo "Le prix global des péages est de : ".$coutTrajet?><?php
                 foreach($visite as $variable)
                 {
                     echo "<pre> Peage : ".$variable['NumP'].'<br/>'."\n"."\t Du troncons : ".$variable['CodT'].'<br/>'."\n"."\t De tarif : ".$variable['Tarif'].'<br/>'."\n"."</pre>";      
                 }?></div><?php
-                }
-            else
+            } ?>
+
+            <div id="login"> <?php echo "Nombre de km parcouru entre les 2 villes : ".$nbKm; ?></div> <?php
+            if ($nbKm  == 0){
                 echo "Faites le tour du périphérique on ne sait jamais ce que vous pourriez découvrir!";
-        ?>    </div>         
+            }
+               
+                ?>
+            </div>         
     </div>
 </body>
 </html>

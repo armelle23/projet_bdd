@@ -21,13 +21,13 @@
             <meta charset="utf-8">
             <meta name="description" content="">
         
-            <title>Test2</title>
-              <link href="style.css" rel="stylesheet">
-         <link href="bibou.css" rel="stylesheet">
+            <title>Ville Arrivée</title>
+            <link href="style.css" rel="stylesheet">
+            <link href="bibou.css" rel="stylesheet">
         </head>
  
 <body>
-    <?php include "menu_2.php"; ?>
+    <?php //include "menu_2.php"; ?>
      <form method="post" action="path.php">
      <div id ="con">
         <div id ="depart">
@@ -63,11 +63,10 @@
              <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
         </div>
         </div>
-
-        <button type="submit" <a >Valider </a> </button>
   
     </form>
 
+        <button type="submit" <a >Valider </a> </button>
    <?php include "footer.php"; ?>
 </body>
 
