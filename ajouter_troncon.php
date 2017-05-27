@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Ajouterun tronçon </title>
-     <link href="style.css" rel="stylesheet">
+     <link href="CSS/style.css" rel="stylesheet">
   </head>
 <body>
 <?php include "menu.php"; ?>
@@ -33,7 +33,6 @@
     </tr>
   </table>
 </form>
-<a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 </div>
   <?php include "footer.php"; ?>
 </body>

@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Ajouter Ville</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
   </head>
 <body>
 
@@ -24,8 +24,6 @@
         </tr>
       </table>
 </form>
-
-<a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 
 </div>
 <?php include "footer.php"; ?>

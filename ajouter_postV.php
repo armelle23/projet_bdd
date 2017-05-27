@@ -33,7 +33,7 @@
 <html>
 <head>
   <title>Ville ajout</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
 <br></br>

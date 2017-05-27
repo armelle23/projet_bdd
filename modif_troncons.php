@@ -13,7 +13,7 @@
 <head>
  	<meta charset="utf-8">
       <title>Modifier Tronçon</title>
-      <link href="style.css" rel="stylesheet">
+      <link href="CSS/style.css" rel="stylesheet">
       </head>
 <body>
 <?php include "menu.php"; ?>
@@ -45,12 +45,9 @@
 				<label for="product"> Nouveau Code Autoroute</label>
 				<input type="Name"   name="CodeA" >
 				<br><br>
-				<input type="submit" value="Save information" >
+				<input type="submit" value="Enregistrer " >
 			</form>
 		</div>
-	
-
-<a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 <?php include "footer.php"; ?>
 
 </body>

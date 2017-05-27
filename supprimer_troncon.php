@@ -13,8 +13,8 @@
     
       <title>Supprimer tronçon</title>
      
-     <link href="bibou.css" rel="stylesheet">
-     <link href="style.css" rel="stylesheet">
+     <link href="CSS/bibou.css" rel="stylesheet">
+     <link href="CSS/style.css" rel="stylesheet">
   
     
     </head>
@@ -48,12 +48,9 @@
               </div>
 
              <br></br> <br></br>
-            <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
            <button type="submit" <a >Supprimer </a> </button>
          
 
       </form>
-      
-    <?php include "footer.php"; ?>
     </body>
     </html>        

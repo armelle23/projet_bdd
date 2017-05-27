@@ -70,12 +70,12 @@
 
 	<title>Autoroutes</title>
     <link href="assets/lib/css/bootstrap.min.css" rel="stylesheet">
-    <link href="menu_deroulant.css" rel="stylesheet">
-    <link href="bibou.css" rel="stylesheet">
-    <link href="login.css" rel="stylesheet">
-    <link href="path.css" rel="stylesheet">
-    <link href="team.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="CSS/menu_deroulant.css" rel="stylesheet">
+    <link href="CSS/bibou.css" rel="stylesheet">
+    <link href="CSS/login.css" rel="stylesheet">
+    <link href="CSS/path.css" rel="stylesheet">
+    <link href="CSS/team.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
     <?php include "menu_2.php"; ?>

@@ -22,8 +22,8 @@
             <meta name="description" content="">
         
             <title>Ville Arrivée</title>
-            <link href="style.css" rel="stylesheet">
-            <link href="bibou.css" rel="stylesheet">
+            <link href="CSS/style.css" rel="stylesheet">
+            <link href="CSS/bibou.css" rel="stylesheet">
         </head>
  
 <body>

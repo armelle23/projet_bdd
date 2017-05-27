@@ -16,7 +16,7 @@
 <html>
 <head>
 	<title>Modifier Autoroute</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
 </head>
  
 <body>

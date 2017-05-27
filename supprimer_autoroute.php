@@ -13,8 +13,8 @@
     <head>
       <meta charset="utf-8">
       <title>Supprimer autoroute</title>
-     <link href="bibou.css" rel="stylesheet">
-      <link href="style.css" rel="stylesheet">
+     <link href="CSS/bibou.css" rel="stylesheet">
+      <link href="CSS/style.css" rel="stylesheet">
     </head>
  
 <body>
@@ -49,7 +49,6 @@
            
 
       </form>
-       <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
      </div>
    
     <?php include "footer.php"; ?>

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link href="login.css" rel="stylesheet">
-   <link href="style.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/panel.css">
 
     <title></title>
 </head>
 <body>
 
-<div id ="con">
+<div id ="content">
 
 <?php include "menu.php"; ?>
     <br></br><br></br>
