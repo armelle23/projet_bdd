@@ -7,8 +7,7 @@
 
   $peage = $bdd->query("SELECT NumP , Tarif FROM peage p , entreprise e WHERE e.CodeE = p.CodeE AND '$NomE' = e.NomE ");
   $autoroutes2 = $peage->fetchAll();
-  $benef = $bdd->query("SELECT NumP, Tarif FROM peage p , entreprise e WHERE e.CodeE = p.CodeE AND '$NomE' = e.NomE ");
-  $money = $benef->fetchAll();
+ 
 ?>
 
 
@@ -52,7 +51,7 @@
           <td> Chiffre d'affaire annuel pour chaque péage: <br></br>
                      
                           <?php
-                              foreach ($money as $donnees) {
+                              foreach ($autoroutes2 as $donnees) {
 
                               
                               echo " CA total pour peage numero " ;

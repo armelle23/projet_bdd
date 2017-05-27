@@ -7,49 +7,41 @@
     $codePostalDepart = $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$vDepart'"); 
     $codePostalDepart->execute();
     $codeDepart = $codePostalDepart->fetchAll()[0]['CodeP'];
-<<<<<<< HEAD
-   
-=======
+
     //print_r("code depart ".$codeDepart);
->>>>>>> 2c155f576fc29f37b05e7f49939f94069655c153
+
 
     $KmDepart = $bdd->prepare("SELECT t.DuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeDepart' AND s.CodT = t.CodT"); 
     $KmDepart->execute();
     $kmDebut = $KmDepart->fetchAll()[0]['DuKm'];
-<<<<<<< HEAD
-    
-=======
+
+
     //print_r("km debut : ".$kmDebut);
->>>>>>> 2c155f576fc29f37b05e7f49939f94069655c153
+
 
     $codePostalArrive =  $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$varrivee'"); 
     $codePostalArrive->execute();
     $codeArrive = $codePostalArrive->fetchAll()[0]['CodeP'];
-<<<<<<< HEAD
-    
-=======
+
     //print_r("code arrive : ".$codeArrive);
->>>>>>> 2c155f576fc29f37b05e7f49939f94069655c153
+
             
  
     $KmFin = $bdd->prepare("SELECT t.AuKm, t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $KmFin->execute();
     $KmArrive = $KmFin->fetchAll()[0]['AuKm'];
-<<<<<<< HEAD
-    
-=======
+
+
     //print_r("km arrive : ".$KmArrive);
->>>>>>> 2c155f576fc29f37b05e7f49939f94069655c153
+
 
     $CodeAuto = $bdd->prepare("SELECT t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $CodeAuto->execute();
     $codeRoute = $CodeAuto->fetchAll()[0]['CodeA_Autoroute'];
 
-<<<<<<< HEAD
-   
-=======
+
     //print_r("code autoroute : ".$codeRoute);
->>>>>>> 2c155f576fc29f37b05e7f49939f94069655c153
+
 
     if ($codeArrive == $codeDepart) {
         $nbKm = 0;
@@ -74,9 +66,7 @@
         $sortie = $bdd->prepare("SELECT Numero FROM  sortie WHERE CodeP = '$codeArrive'"); 
         $sortie->execute();
         $sortir = $sortie->fetchAll()[0]['Numero'];
-<<<<<<< HEAD
-       
-=======
+
         //print_r("sortir : ".$sortir); 
 //SUM (t.Tarif)
         $prix = $bdd ->prepare("SELECT SUM(Tarif) FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
@@ -88,7 +78,7 @@
         $passage->execute();
         $visite = $passage->fetchAll();
         //print_r($visite); 
->>>>>>> 2c155f576fc29f37b05e7f49939f94069655c153
+
     }  
 ?>
 
