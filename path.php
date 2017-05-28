@@ -8,22 +8,15 @@
     $codePostalDepart->execute();
     $codeDepart = $codePostalDepart->fetchAll()[0]['CodeP'];
 
-    //print_r("code depart ".$codeDepart);
-
 
     $KmDepart = $bdd->prepare("SELECT t.DuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeDepart' AND s.CodT = t.CodT"); 
     $KmDepart->execute();
     $kmDebut = $KmDepart->fetchAll()[0]['DuKm'];
 
 
-    //print_r("km debut : ".$kmDebut);
-
-
     $codePostalArrive =  $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$varrivee'"); 
     $codePostalArrive->execute();
     $codeArrive = $codePostalArrive->fetchAll()[0]['CodeP'];
-
-    //print_r("code arrive : ".$codeArrive);
 
             
  
@@ -32,16 +25,10 @@
     $KmArrive = $KmFin->fetchAll()[0]['AuKm'];
 
 
-    //print_r("km arrive : ".$KmArrive);
-
 
     $CodeAuto = $bdd->prepare("SELECT t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $CodeAuto->execute();
     $codeRoute = $CodeAuto->fetchAll()[0]['CodeA_Autoroute'];
-
-
-    //print_r("code autoroute : ".$codeRoute);
-
 
     if ($codeArrive == $codeDepart) {
         $nbKm = 0;
@@ -67,8 +54,7 @@
         $sortie->execute();
         $sortir = $sortie->fetchAll()[0]['Numero'];
 
-        //print_r("sortir : ".$sortir); 
-//SUM (t.Tarif)
+
         $prix = $bdd ->prepare("SELECT SUM(Tarif) FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
         $prix->execute();
         $coutTrajet = $prix->fetchAll()[0]['SUM(Tarif)'];
@@ -76,9 +62,10 @@
 
         $passage = $bdd ->prepare("SELECT NumP, Tarif, t.CodT FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
         $passage->execute();
-        $visite = $passage->fetchAll();
-        //print_r($visite); 
 
+        $visite = $passage->fetchAll();
+    
+        $visite = $passage->fetchAll();
     }  
 ?>
 
@@ -99,6 +86,7 @@
     <link href="team.css" rel="stylesheet">
 </head>
 <body>
+<?php include "menu_2.php"; ?>
 <form method="post" action="BDD_project.php">
 <div id="container">
        <div id="login">
