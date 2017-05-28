@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link href="CSS/login.css" rel="stylesheet">
-   <link href="CSS/style.css" rel="stylesheet">
+   <link href="CSS/index.css" rel="stylesheet">
+
 
     <title>Type de connexion</title>    
 </head>
 <body>
 
-<div id="container">
+<div id="containr">
         <div class="head"> Choix </div>
         <div class="content">
                 <div class="form-control">
