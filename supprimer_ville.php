@@ -46,7 +46,7 @@
                </div>
 
                  <br></br> <br></br> <br></br>
-                <input type="button" value="Supprimer">
+                <input type="submit" value="Supprimer" >
 
             </form>
             </div>

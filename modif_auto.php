@@ -43,7 +43,9 @@
           <label>Nouveau kilométrage</label>
           <labe><input type="text" name="KmT"></label>
         
-      </div>
+        <br></br>
+       <input type="submit" value="Enregistrer">
+       </div>
 </form>
 </div>
 </div>

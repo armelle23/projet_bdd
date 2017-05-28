@@ -12,14 +12,14 @@
         <div class="head"> Choix </div>
         <div class="content">
                 <div class="form-control">
-                    <a href="login_admin.php"> <input type="button2" value="Connection administrateur  "> </a>
+                    <a href="login_admin.php"> <input type="button2" value="Connexion administrateur  "> </a>
                 </div>
                 <div class="form-control">
                     <a href="login_user.php" > <input type="button2" value="Connection utilisateur"> </a>
                 </div>
         </div>
 </div>
-
+i
 </div>
 </body>
 <?php include "footer.php"; ?>

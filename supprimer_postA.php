@@ -8,7 +8,7 @@
  
   if($reponse)
   {
-    echo("Vous avez supprimer le tronçon ! ") ;
+    echo("Vous avez supprimer l'autoroute ! ") ;
   }
   else
   {
