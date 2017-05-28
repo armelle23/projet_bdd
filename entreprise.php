@@ -12,10 +12,11 @@
 <html>
 <head>
 	<title>Modifier Autoroute</title>
-    <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/ent.css" rel="stylesheet">
 </head>
  
 <body>
+<div class="container">
 <?php include "menu.php"; ?>
 
 <form name="insertion" action="entreprise_POST.php" method="POST">
@@ -23,6 +24,7 @@
         <tr align="center">
          
           <td> Nos partenaires :
+          <br></br>
                       <select name="NomE" id="selector" >
                           <?php
             foreach($autoroutes as $donnees)
@@ -39,6 +41,10 @@
         </tr>
       </table>
 </form>
+</div>
 </body>
+  <div class="centrer">
+              <img class="centrer" src="ent.png" alt="entrée" />
+              </div>
 <?php include "footer.php"; ?>
 </html>
