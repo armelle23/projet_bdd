@@ -8,23 +8,18 @@
     $codePostalDepart->execute();
     $codeDepart = $codePostalDepart->fetchAll()[0]['CodeP'];
 
-
     $KmDepart = $bdd->prepare("SELECT t.DuKm FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeDepart' AND s.CodT = t.CodT"); 
     $KmDepart->execute();
     $kmDebut = $KmDepart->fetchAll()[0]['DuKm'];
 
-
     $codePostalArrive =  $bdd->prepare("SELECT CodeP FROM ville WHERE NomV = '$varrivee'"); 
     $codePostalArrive->execute();
     $codeArrive = $codePostalArrive->fetchAll()[0]['CodeP'];
-
             
  
     $KmFin = $bdd->prepare("SELECT t.AuKm, t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $KmFin->execute();
     $KmArrive = $KmFin->fetchAll()[0]['AuKm'];
-
-
 
     $CodeAuto = $bdd->prepare("SELECT t.CodeA_Autoroute FROM  ville v, sortie s, troncon t  WHERE s.CodeP = '$codeArrive' AND s.CodT = t.CodT "); 
     $CodeAuto->execute();
@@ -54,7 +49,6 @@
         $sortie->execute();
         $sortir = $sortie->fetchAll()[0]['Numero'];
 
-
         $prix = $bdd ->prepare("SELECT SUM(Tarif) FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
         $prix->execute();
         $coutTrajet = $prix->fetchAll()[0]['SUM(Tarif)'];
@@ -62,12 +56,6 @@
 
         $passage = $bdd ->prepare("SELECT NumP, Tarif, t.CodT FROM peage p, troncon t  WHERE  t.CodeA_Autoroute = '$codeRoute' AND t.AuKm >= '$kmDebut' AND t.DuKm <= '$KmArrive' AND t.CodT = p.CodT");
         $passage->execute();
-<<<<<<< HEAD
-
-        $visite = $passage->fetchAll();
-    
-=======
->>>>>>> 2ad4ebd0a66ed78ca32c4176fc117caad5fd7a9a
         $visite = $passage->fetchAll();
     }  
 ?>
@@ -83,15 +71,12 @@
 	<title>Autoroutes</title>
     <link href="assets/lib/css/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/menu_deroulant.css" rel="stylesheet">
-    <link href="CSS/bibou.css" rel="stylesheet">
-    <link href="CSS/login.css" rel="stylesheet">
-    <link href="CSS/path.css" rel="stylesheet">
-    <link href="CSS/team.css" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/chemin.css" rel="stylesheet">
 </head>
+
 <body>
     <?php include "menu_2.php"; ?>
-<form method="post" action="BDD_project.php">
 <br><br>
 <div id="container">
        <div id="login">
@@ -99,7 +84,6 @@
             <strong>Ville d'arrivée</strong> <?php echo $varrivee;?>
         </div>
    
-        <
         <?php    
             if ($nbKm != 0) {
                 ?>
@@ -123,8 +107,8 @@
             } ?>
 
             <div id="login"> <?php echo "Nombre de km parcouru entre les 2 villes : ".$nbKm; ?></div> <?php
-            if ($nbKm  == 0){
-                echo "Faites le tour du périphérique on ne sait jamais ce que vous pourriez découvrir!";
+            if ($nbKm  == 0){?>   
+                <div id="login"> <?php echo "Faites le tour du périphérique on ne sait jamais ce que vous pourriez découvrir!"; ?> </div><?php
             }
                
                 ?>

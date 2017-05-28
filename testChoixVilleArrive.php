@@ -27,11 +27,7 @@
         </head>
  
 <body>
-<<<<<<< HEAD
-
-=======
-    <?php //include "menu_2.php"; ?>
->>>>>>> 2ad4ebd0a66ed78ca32c4176fc117caad5fd7a9a
+    <?php include "menu_2.php"; ?>
      <form method="post" action="path.php">
      <div id ="con">
         <div id ="depart">
