@@ -12,8 +12,8 @@
     
       <title>Autoflex</title>
       
-     <link href="bibou.css" rel="stylesheet">
-     <link href="style.css" rel="stylesheet">
+     <link href="CSS/bibou.css" rel="stylesheet">
+     <link href="CSS/style.css" rel="stylesheet">
 
     </head>
  

@@ -13,21 +13,19 @@
     <head>
       <meta charset="utf-8">
       <title>Supprimer autoroute</title>
-     <link href="bibou.css" rel="stylesheet">
-      <link href="style.css" rel="stylesheet">
+     <link href="CSS/bibou.css" rel="stylesheet">
+      <link href="CSS/suppr_ville.css" rel="stylesheet">
     </head>
  
 <body>
 
 
 <?php include "menu.php"; ?>
-<div class ="container">
+<div id ="container">
    <form method="get" action="supprimer_postA.php">
-
-         <div id ="con">
-              
+       
               <div id ="depart">
-                      
+                        <br></br><br></br>
                        <label > Autoroute à supprimer : </label>
                       <select name="CodeA" id="selector" >
                           <?php
@@ -41,17 +39,16 @@
                      
                       </select>
 
+
                  </div>
-           </div>
 
-             
-           <button type="submit" <a >Supprimer </a> </button>
-           
-
+          
+                </div>
+              <br></br><br></br> 
+           <input type="button" value="Supprimer">
+ 
       </form>
-       <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
      </div>
-   
     <?php include "footer.php"; ?>
     </body>
     </html>        

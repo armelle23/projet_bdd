@@ -1,9 +1,10 @@
 <html>
   <head>
     <title>Ajouter Autoroute</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
   </head>
 <body>
+<div class="container">
 <?php include "menu.php"; ?>
 <form name="insertion" action="ajouter_postA.php" method="POST">
   <table border="0" align="center" cellspacing="50" cellpadding="4">
@@ -23,8 +24,8 @@
     </tr>
   </table>
 </form>
+</div>
 
-<a href="panel_admin.php" ><input type="button" value="Retour"> </a>
   <?php include "footer.php"; ?>
 </body>
 </html>

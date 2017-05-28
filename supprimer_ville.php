@@ -12,17 +12,18 @@
      
       <title>Supprimer Ville</title>
      
-     <link href="bibou.css" rel="stylesheet">
-      <link href="style.css" rel="stylesheet">
+     <link href="CSS/bibou.css" rel="stylesheet">
+      <link href="CSS/suppr_ville.css" rel="stylesheet">
      
     
     </head>
     <?php include "menu.php"; ?>
       <body>
+      <div id="container">
 
          <form method="get" action="supprimer_postV.php">
 
-             <div id ="con">
+           
                   
                   <div id ="depart">
                            <br></br> <br></br>
@@ -42,15 +43,13 @@
 
                           <span class="fa fa-chevron-down select-down" aria-hidden="true"></span>
 
-                  </div>
                </div>
 
                  <br></br> <br></br> <br></br>
-              
-                <a href="panel_admin.php"> <input type="button" value="Retour"> </a>
-                <button type="submit" <a >Supprimer </a> </button> 
+                <input type="button" value="Supprimer">
 
             </form>
+            </div>
 
         <?php include "footer.php"; ?>
           </body>

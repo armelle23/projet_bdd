@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link href="login.css" rel="stylesheet">
-   <link href="style.css" rel="stylesheet">
+   <link href="CSS/login.css" rel="stylesheet">
+   <link href="CSS/style.css" rel="stylesheet">
 
     <title></title>
      

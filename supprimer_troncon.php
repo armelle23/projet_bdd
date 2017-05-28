@@ -13,18 +13,19 @@
     
       <title>Supprimer tronçon</title>
      
-     <link href="bibou.css" rel="stylesheet">
-     <link href="style.css" rel="stylesheet">
+     <link href="CSS/bibou.css" rel="stylesheet">
+     <link href="CSS/suppr_ville.css" rel="stylesheet">
   
     
     </head>
  
 <body>
+<div id ="container">
   <?php include "menu.php"; ?>
 
    <form method="get" action="supprimer_postT.php">
 
-         <div id ="con">
+         
               
               <div id ="depart">
                        <br></br><br></br>
@@ -48,12 +49,11 @@
               </div>
 
              <br></br> <br></br>
-            <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
-           <button type="submit" <a >Supprimer </a> </button>
+           <input type="button" value="Supprimer">
          
 
       </form>
-      
-    <?php include "footer.php"; ?>
+      </div>
+       <?php include "footer.php"; ?>
     </body>
     </html>        

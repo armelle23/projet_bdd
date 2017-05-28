@@ -1,0 +1,58 @@
+#container {
+<<<<<<< HEAD:team.css
+     width: 33vw;
+    margin : 5vh;
+    padding: 20px;
+=======
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#container2 {
+    margin-right: 20px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+>>>>>>> 2ad4ebd0a66ed78ca32c4176fc117caad5fd7a9a:CSS/team.css
+
+    border-radius: 3px;
+    box-shadow: 0 1px 4px #ccc;
+  /*border: 1px solid #fff */
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#login, #register {
+    
+    margin : 5vh;
+    padding: 20px;
+    border-radius: 3px;
+   
+  /*border: 1px solid #fff */
+}
+
+
+.content {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+
+
+<<<<<<< HEAD:team.css
+=======
+.fleche
+{
+    margin-left: 1000px;
+}
+
+>>>>>>> 2ad4ebd0a66ed78ca32c4176fc117caad5fd7a9a:CSS/team.css

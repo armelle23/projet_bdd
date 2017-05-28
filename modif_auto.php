@@ -8,22 +8,26 @@
 
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Modifier Autoroute</title>
-    <link href="style.css" rel="stylesheet">
+<link href="CSS/modif_tron.css" rel="stylesheet">
+      <link href="CSS/style.css" rel="stylesheet">
 </head>
  
 <body>
+<div id ="container">
 <?php include "menu.php"; ?>
 
-<form name="insertion" action="modif_postA.php" method="POST">
-      <table border="0" align="center" cellspacing="50" cellpadding="2">
-        <tr align="center">
+  <div class="text">
+
+        <form name="insertion" action="modif_postA.php" method="POST">
+    
          
-          <td> Code d'autoroute :
+            <div id ="depart">
+      <br></br><br></br>
+          <label> Code d'autoroute :</label>
                       <select name="CodeA" id="selector" >
                           <?php
             foreach($autoroutes as $donnees)
@@ -34,18 +38,15 @@
                           ?>
                      
                       </select>
-			</td>
-        </tr>
-        <tr align="center">
-          <td>Nouveau kilométrage</td>
-          <td><input type="text" name="KmT"></td>
-        </tr>
-        <tr align="center">
-          <td colspan="2"><input type="submit" value="Modifier"></td>
-        </tr>
-      </table>
+			
+        <br></br><br></br>
+          <label>Nouveau kilométrage</label>
+          <labe><input type="text" name="KmT"></label>
+        
+      </div>
 </form>
+</div>
+</div>
 </body>
-  <a href="panel_admin.php" > <input type="button" value="Retour"> </a>
 <?php include "footer.php"; ?>
 </html>
